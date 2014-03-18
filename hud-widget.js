@@ -10,10 +10,10 @@ function Widget(options) {
   var app = express()
     , defaultOptions =
       { port: process.env.PORT || 3000
-      , viewPath: path.normalize('views')
+      , viewPath: process.cwd() + '/views'
       , viewEngine: 'jade'
       , favicon: express.favicon()
-      , staticPath: path.normalize('public')
+      , staticPath: process.cwd() + '/public'
       , logger: express.logger('dev')
       , autoStart: true
       }
