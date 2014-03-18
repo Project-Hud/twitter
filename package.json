@@ -1,0 +1,39 @@
+{
+  "name": "hud-widget",
+  "version": "0.0.1",
+  "main": "hud-widget.js",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint .",
+    "pretest": "npm run-script lint",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Project-Hud/hud-widget.git"
+  },
+  "author": "James Mortemore",
+  "bugs": {
+    "url": "https://github.com/Project-Hud/hud-widget/issues"
+  },
+  "homepage": "https://github.com/Project-Hud/hud-widget",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "istanbul": "~0.1.44",
+    "async": "~0.2.9",
+    "should": "2",
+    "jshint": "~2.3.0"
+  },
+  "dependencies": {
+    "express": "3.4.6",
+    "jade": "~1.1.5",
+    "lodash.assign": "~2.4.1"
+  }
+}
