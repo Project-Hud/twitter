@@ -13,7 +13,7 @@ widget.get('/', function (req, res) {
   })
 })
 
-widget.get('/latest', function () {
+widget.get('/latest', function (req, res) {
   getLatestTweet(function (err, tweet) {
     if (err) {
       console.log(err)
